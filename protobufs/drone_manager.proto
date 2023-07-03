@@ -1,0 +1,28 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+package acs.drone_manager;
+
+message SetGoalRequest {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+}
+
+message SetGoalResponse {
+    bool success = 1;
+    string order_id = 2;
+}
+
+message LandDroneResponse {
+    bool success = 1;
+}
+
+message ReturnDroneResponse {
+    bool success = 1;
+}
+
+service DroneManager {
+    rpc SetGoal(SetGoalRequest) returns (SetGoalResponse);
+    rpc LandDrone(google.protobuf.Empty) returns (LandDroneResponse);
+    rpc ReturnDrone(google.protobuf.Empty) returns (ReturnDroneResponse);
+}

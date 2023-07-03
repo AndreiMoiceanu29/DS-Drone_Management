@@ -1,0 +1,7 @@
+database:
+  user: "test"
+  password: "test"
+  host: "172.20.0.5"
+  port: 27017
+
+secret_key: "Z7$%L!9.<eVNa_]E&]s$&`P=V3n~5F+^5(Hb6,&f"
